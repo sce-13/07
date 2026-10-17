@@ -1,16 +1,19 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int i;
-    int temp = 1;
+int inc(int counter);
 
+int main(void) 
+{ 
+    int i = 10; 
+    printf("함수 호출전 i=%d\n", i); 
+    i = inc(i); 
+    printf("함수 호출후 i=%d\n", i); 
 
-    for (i=0;i<5;i++)
-    {
-        printf("temp = %d\n", temp);
-        temp++;
-    }
+    return 0; 
+} 
 
-    return 0;
+int inc(int counter) 
+{ 
+    counter++; 
+    return counter; 
 }
